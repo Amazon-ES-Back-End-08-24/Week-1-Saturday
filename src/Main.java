@@ -38,6 +38,8 @@ public class Main {
 
 
         // arraysExercise();
+
+        // stringMethods();
     }
 
     private static void simpleIf(int temperature) {
@@ -488,5 +490,52 @@ public class Main {
             }
         }
         System.out.println("Days above average: " + daysAboveAverage);
+    }
+
+
+    private static void stringMethods() {
+        String strExample = "Hola";
+        int length = strExample.length();
+        System.out.println(length);
+
+        char ch = strExample.charAt(0);
+        System.out.println(ch);
+
+        String sub = strExample.substring(0, 4);
+        System.out.println(sub);
+
+        String lower = strExample.toLowerCase();
+        String upper = strExample.toUpperCase();
+        System.out.println(lower);
+        System.out.println(upper);
+
+        System.out.println(strExample); //no modificamos strExample nunca
+
+        String untrimmed = "  No spaces please   ";
+        String trimmed = untrimmed.trim();
+        System.out.println(untrimmed);
+        System.out.println(trimmed);
+
+        String replaced = strExample.replace('o', 'x');
+        System.out.println(replaced);
+
+        boolean startWith = strExample.startsWith("Ho");
+        boolean endsWith = strExample.endsWith("a");
+        System.out.println(startWith);
+        System.out.println(endsWith);
+
+        boolean contains = strExample.contains("la");
+        System.out.println(contains);
+
+        String namesExample = "Pepe-Maria-Luisa";
+        String[] namesArray = namesExample.split("-");
+        System.out.println(namesArray[0]);
+        System.out.println(namesArray[1]);
+        System.out.println(namesArray[2]);
+
+        boolean isEqual = strExample.equals("hola");
+        System.out.println(isEqual);
+        isEqual = strExample.equalsIgnoreCase("hola");
+        System.out.println(isEqual);
     }
 }
